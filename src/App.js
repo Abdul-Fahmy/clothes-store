@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import {
   onAuthStateChangedListener,
   createUserDocFromAuth,
-} from "../utils/firebase/firebase.utils";
+} from "./utils/firebase/firebase.utils";
 import Navigation from "./route/navigation/navigation.component";
 import Authantication from "./route/authantication/authantication.component";
 import Shop from "./route/shop/shop.component";
@@ -23,7 +23,7 @@ const App = () => {
       dispatch(setCurrentUser(user));
     });
     return unsubscribed;
-  }, [dispatch]);
+  }, []);
 
   return (
     <Routes>
