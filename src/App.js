@@ -23,7 +23,7 @@ const App = () => {
       dispatch(setCurrentUser(user));
     });
     return unsubscribed;
-  }, []);
+  }, [dispatch]);
 
   return (
     <Routes>
